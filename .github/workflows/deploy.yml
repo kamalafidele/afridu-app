@@ -1,0 +1,59 @@
+name: Build & Deploy Afridu App 
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  update:
+    name: Update Afridu App image
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+     
+    - name: create env file
+      run: |
+          touch .env
+          echo NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=${{ secrets.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY }} >> .env
+          echo CLERK_SECRET_KEY=${{ secrets.CLERK_SECRET_KEY }} >> .env
+          echo NEXT_PUBLIC_CLERK_SIGN_IN_URL=${{ secrets.ADMIN_API_NEXT_PUBLIC_CLERK_SIGN_IN_URL }} >> .env
+          echo NEXT_PUBLIC_CLERK_SIGN_UP_URL=${{ secrets.ADMIN_API_NEXT_PUBLIC_CLERK_SIGN_UP_URL }} >> .env
+          echo NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=${{ secrets.ADMIN_API_NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL }} >> .env
+          echo NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=${{ secrets.ADMIN_API_NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL }} >> .env
+          echo NEXT_PUBLIC_APP_URL=${{ secrets.ADMIN_API_NEXT_PUBLIC_APP_URL }} >> .env
+
+    - name: Login to DockerHub Registry
+      run: echo ${{ secrets.DOCKERHUB_PASSWORD }} | docker login -u ${{ secrets.DOCKERHUB_USERNAME }} --password-stdin
+
+    - name: Build, tag, and push image to docker hub
+      env:
+        HUB_REPOSITORY: kamarafidele/afridu
+        IMAGE_TAG: live_app
+      run: |
+        # Build a docker container and push it to Docker hub
+        echo "Building the image........"
+        docker build -t $HUB_REPOSITORY:$IMAGE_TAG .
+        echo "Pushing image to Docker HUB..."
+        docker push $HUB_REPOSITORY:$IMAGE_TAG
+        echo "::set-output name=image::$HUB_REPOSITORY:$IMAGE_TAG"
+
+    - name: Deploy app on Server 
+      uses: appleboy/ssh-action@master
+      with:
+        host: 64.227.96.121
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.PRIVATE_KEY }}
+        port: 22
+        script: |
+            # Stop all running Docker Containers
+            sudo docker kill  $(sudo docker ps -q)
+
+            # Free up space
+            sudo docker system prune -f
+
+            # Pull the latest image from Docker Hub
+            sudo docker pull kamarafidele/afridu:live_app
+
+            # Run the new container
+            sudo docker run --name afridu_app -d --restart unless-stopped -p 3000:3000 kamarafidele/afridu:live_app
