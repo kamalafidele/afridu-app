@@ -324,26 +324,26 @@ const discussions = [
     id: "1",
     title: "How to optimize React performance?",
     excerpt: "I have been working on a complex React application and noticed some performance issues. What are the best practices for optimizing React performance?",
-    author: "Alex Chen",
+    author: "Mugisha David",
     date: "2 days ago",
     comments: [
       {
         id: "1-1",
-        author: "Michael Wong",
+        author: "Rusine King",
         date: "2 days ago",
         content: "I recommend looking into React.memo for preventing unnecessary re-renders of components. Also, make sure you're not creating new functions in your render method that could cause child components to re-render.",
         avatar: "M"
       },
       {
         id: "1-2",
-        author: "Sarah Johnson",
+        author: "Muhabekazi Alice",
         date: "1 day ago",
         content: "Have you checked out the React Profiler in DevTools? It's really helpful for identifying which components are rendering unnecessarily and taking too long.",
         avatar: "S"
       },
       {
         id: "1-3",
-        author: "James Wilson",
+        author: "Ishimwe Gad",
         date: "1 day ago",
         content: "Consider using lazy loading and code splitting to reduce your initial bundle size. It made a huge difference in our application's load time.",
         avatar: "J"
@@ -354,26 +354,26 @@ const discussions = [
     id: "2",
     title: "Feedback on my UI/UX project",
     excerpt: "Just completed the UI/UX course final project. Would love some constructive feedback on my design approach.",
-    author: "Sarah Johnson",
+    author: "Muhabekazi Alice",
     date: "1 week ago",
     comments: [
       {
         id: "2-1",
-        author: "Olivia Taylor",
+        author: "Akeza Rebecca",
         date: "6 days ago",
         content: "I really like your color palette choices! The contrast is excellent for accessibility. One suggestion would be to consider the spacing between elements a bit more carefully.",
         avatar: "O"
       },
       {
         id: "2-2",
-        author: "Alex Chen",
+        author: "Mugisha David",
         date: "5 days ago",
         content: "The mobile responsiveness looks good, but I noticed some overlapping elements at certain breakpoints. Maybe add a few more media queries?",
         avatar: "A"
       },
       {
         id: "2-3",
-        author: "Emma Garcia",
+        author: "Muhoza Emmily",
         date: "3 days ago",
         content: "From a marketing perspective, I think your call-to-action buttons could be more prominent. They're getting lost in the overall design.",
         avatar: "E"
@@ -384,19 +384,19 @@ const discussions = [
     id: "3",
     title: "Node.js deployment best practices",
     excerpt: "What are your recommendations for deploying Node.js applications to production? Looking for security and performance tips.",
-    author: "Michael Wong",
+    author: "Rusine King",
     date: "3 days ago",
     comments: [
       {
         id: "3-1",
-        author: "Alex Chen",
+        author: "Mugisha David",
         date: "2 days ago",
         content: "Always use environment variables for configuration and secrets. Never commit sensitive data to your repository. Tools like dotenv can help manage this.",
         avatar: "A"
       },
       {
         id: "3-2",
-        author: "James Wilson",
+        author: "Ishimwe Gad",
         date: "1 day ago",
         content: "Consider using a process manager like PM2 to handle restarts and crashes. It also provides useful monitoring capabilities.",
         avatar: "J"
@@ -407,33 +407,33 @@ const discussions = [
     id: "4",
     title: "Career transition to web development",
     excerpt: "I am currently transitioning from marketing to web development. Any advice on building a portfolio that stands out?",
-    author: "Emma Garcia",
+    author: "Muhoza Emmily",
     date: "Yesterday",
     comments: [
       {
         id: "4-1",
-        author: "Olivia Taylor",
+        author: "Akeza Rebecca",
         date: "23 hours ago",
         content: "Focus on solving real problems. Even if they're small, having projects that address actual needs will make your portfolio more meaningful than just tutorial projects.",
         avatar: "O"
       },
       {
         id: "4-2",
-        author: "Sarah Johnson",
+        author: "Muhabekazi Alice",
         date: "22 hours ago",
         content: "Your marketing background is a strength! Consider creating projects that showcase the intersection of marketing and development, like landing pages with A/B testing components.",
         avatar: "S"
       },
       {
         id: "4-3",
-        author: "Michael Wong",
+        author: "Rusine King",
         date: "10 hours ago",
         content: "Document your journey. Write about what you're learning and the challenges you're facing. It shows your thought process and growth mindset.",
         avatar: "M"
       },
       {
         id: "4-4",
-        author: "Alex Chen",
+        author: "Mugisha David",
         date: "5 hours ago",
         content: "Don't be afraid to contribute to open source. Even small contributions show you can work with existing codebases and collaborate with others.",
         avatar: "A"
@@ -445,42 +445,42 @@ const discussions = [
 const members = [
   {
     id: "1",
-    name: "Alex Chen",
+    name: "Mugisha David",
     role: "Full-Stack Developer",
     joined: "Jan 2023",
     courses: 8,
   },
   {
     id: "2",
-    name: "Sarah Johnson",
+    name: "Muhabekazi Alice",
     role: "UI/UX Designer",
     joined: "Mar 2023",
     courses: 5,
   },
   {
     id: "3",
-    name: "Michael Wong",
+    name: "Rusine King",
     role: "Backend Developer",
     joined: "Nov 2022",
     courses: 12,
   },
   {
     id: "4",
-    name: "Emma Garcia",
+    name: "Muhoza Emmily",
     role: "Marketing Specialist",
     joined: "Apr 2023",
     courses: 3,
   },
   {
     id: "5",
-    name: "James Wilson",
+    name: "Ishimwe Gad",
     role: "Product Manager",
     joined: "Feb 2023",
     courses: 7,
   },
   {
     id: "6",
-    name: "Olivia Taylor",
+    name: "Akeza Rebecca",
     role: "Frontend Developer",
     joined: "Dec 2022",
     courses: 9,

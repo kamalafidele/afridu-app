@@ -92,7 +92,7 @@ export function CourseModal({
   // Mock reviews
   const reviews = [
     {
-      name: "Sarah Johnson",
+      name: "Muhabekazi Alice",
       date: "June 15, 2026",
       rating: 5,
       comment: "This course exceeded my expectations. The instructor was knowledgeable and the content was well-structured."
