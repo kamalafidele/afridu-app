@@ -567,6 +567,31 @@ export default function ProgressPage() {
         </section>
         
         {/* Achievement Badges */}
+        <section className="mb-10">
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-xl font-bold text-foreground">Your Achievements</h2>
+            <Button variant="link" className="text-primary">View All</Button>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+            {[
+              { name: "Early Bird", desc: "Complete 5 lessons before 9am", color: "bg-gradient-to-br from-yellow-400 to-orange-500", icon: <Sun className="h-6 w-6" /> },
+              { name: "Night Owl", desc: "Study for 2 hours after 10pm", color: "bg-gradient-to-br from-indigo-500 to-blue-600", icon: <Moon className="h-6 w-6" /> },
+              { name: "Consistent", desc: "Study for 7 days in a row", color: "bg-gradient-to-br from-green-400 to-teal-500", icon: <Calendar className="h-6 w-6" /> },
+              { name: "Perfectionist", desc: "Score 100% on 3 quizzes", color: "bg-gradient-to-br from-purple-400 to-pink-500", icon: <Award className="h-6 w-6" /> },
+              { name: "Speed Demon", desc: "Complete a course in record time", color: "bg-gradient-to-br from-red-400 to-pink-600", icon: <Zap className="h-6 w-6" /> },
+              { name: "Explorer", desc: "Try courses from 5 categories", color: "bg-gradient-to-br from-blue-400 to-emerald-500", icon: <Compass className="h-6 w-6" /> },
+            ].map((badge, index) => (
+              <div key={index} className={`${index > 3 ? 'opacity-30' : ''} rounded-lg p-4 flex flex-col items-center justify-center text-center ${badge.color} text-white aspect-square hover:shadow-lg transition-shadow`}>
+                <div className="mb-2">{badge.icon}</div>
+                <h3 className="font-medium text-sm mb-1">{badge.name}</h3>
+                <p className="text-xs opacity-90">{badge.desc}</p>
+                {index <= 3 && (
+                  <span className="mt-2 px-2 py-0.5 bg-white/20 rounded-full text-[10px]">Earned</span>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
 
         {/* Learning Goals */}
         <section>

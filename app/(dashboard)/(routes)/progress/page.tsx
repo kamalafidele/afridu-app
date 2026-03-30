@@ -1260,41 +1260,7 @@ export default function ProgressPage() {
         </section>
         
         {/* Achievement Badges */}
-        <section className="mb-10">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-bold text-foreground">Your Achievements</h2>
-            <Button 
-              variant="link" 
-              className="text-primary"
-              onClick={() => setIsAchievementsModalOpen(true)}
-            >
-              View All
-            </Button>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {achievements.slice(0, 6).map((achievement, index) => (
-              <div 
-                key={achievement.id} 
-                className={`${index > 3 ? 'opacity-30' : ''} rounded-lg p-4 flex flex-col items-center justify-center text-center ${achievement.color} text-white aspect-square hover:shadow-lg transition-shadow cursor-pointer`}
-                onClick={() => setIsAchievementsModalOpen(true)}
-              >
-                <div className="mb-2">{achievement.icon}</div>
-                <h3 className="font-medium text-sm mb-1">{achievement.name}</h3>
-                <p className="text-xs opacity-90">{achievement.description}</p>
-                {achievement.earned && index <= 3 && (
-                  <span className="mt-2 px-2 py-0.5 bg-white/20 rounded-full text-[10px]">Earned</span>
-                )}
-              </div>
-            ))}
-          </div>
-          
-          {/* Achievement Modal */}
-          <AchievementModal 
-            isOpen={isAchievementsModalOpen}
-            onClose={() => setIsAchievementsModalOpen(false)}
-            achievements={achievements}
-          />
-        </section>
+
 
         {/* Learning Goals */}
         <section>
