@@ -59,7 +59,7 @@ export const ActiveGoalModal = ({
     {
       id: 1,
       title: "Complete React Course",
-      description: "Finish all lessons by August 25",
+      description: "Finish all lessons by February 25",
       icon: (
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -70,13 +70,13 @@ export const ActiveGoalModal = ({
       timeLeft: "10 days left",
       color: "bg-primary",
       textColor: "text-primary",
-      startDate: "July 15, 2025",
-      endDate: "August 25, 2025",
+      startDate: "January 15, 2026",
+      endDate: "February 25, 2026",
       milestones: [
-        { title: "Complete React Fundamentals section", completed: true, dueDate: "July 25, 2025" },
-        { title: "Complete React Hooks section", completed: true, dueDate: "August 5, 2025" },
-        { title: "Complete React Router section", completed: false, dueDate: "August 15, 2025" },
-        { title: "Complete Final Project", completed: false, dueDate: "August 25, 2025" }
+        { title: "Complete React Fundamentals section", completed: true, dueDate: "January 25, 2026" },
+        { title: "Complete React Hooks section", completed: true, dueDate: "February 5, 2026" },
+        { title: "Complete React Router section", completed: false, dueDate: "February 15, 2026" },
+        { title: "Complete Final Project", completed: false, dueDate: "February 25, 2026" }
       ],
       relatedResources: [
         { title: "React Fundamentals", type: "Course", completed: true },
@@ -101,8 +101,8 @@ export const ActiveGoalModal = ({
       color: "bg-yellow-500",
       textColor: "text-yellow-600 dark:text-yellow-400",
       iconBg: "bg-yellow-100 dark:bg-yellow-900/20",
-      startDate: "July 25, 2025",
-      endDate: "August 30, 2025",
+      startDate: "January 25, 2026",
+      endDate: "February 30, 2026",
       milestones: [
         { title: "Week 1: 7 consecutive days", completed: true },
         { title: "Week 2: 7 consecutive days", completed: true },
@@ -131,14 +131,14 @@ export const ActiveGoalModal = ({
       color: "bg-green-500",
       textColor: "text-green-600 dark:text-green-400",
       iconBg: "bg-green-100 dark:bg-green-900/20",
-      startDate: "July 1, 2025",
-      endDate: "September 30, 2025",
+      startDate: "January 1, 2026",
+      endDate: "March 30, 2026",
       milestones: [
-        { title: "HTML & CSS Basics", completed: true, dueDate: "July 15, 2025" },
-        { title: "JavaScript Fundamentals", completed: true, dueDate: "August 15, 2025" },
-        { title: "React Basics", completed: false, dueDate: "September 1, 2025" },
-        { title: "Node.js Basics", completed: false, dueDate: "September 15, 2025" },
-        { title: "Full Stack Project", completed: false, dueDate: "September 30, 2025" }
+        { title: "HTML & CSS Basics", completed: true, dueDate: "January 15, 2026" },
+        { title: "JavaScript Fundamentals", completed: true, dueDate: "February 15, 2026" },
+        { title: "React Basics", completed: false, dueDate: "March 1, 2026" },
+        { title: "Node.js Basics", completed: false, dueDate: "March 15, 2026" },
+        { title: "Full Stack Project", completed: false, dueDate: "March 30, 2026" }
       ],
       relatedResources: [
         { title: "HTML & CSS Basics", type: "Course", completed: true },

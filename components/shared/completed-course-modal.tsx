@@ -348,7 +348,7 @@ export function CompletedCourseModal({
                   <div className="flex justify-between items-center mt-8">
                     <div className="text-left">
                       <p className="text-sm">Certificate ID</p>
-                      <p className="text-xs text-muted-foreground">{certificateId || 'CERT-2025-08-12345'}</p>
+                      <p className="text-xs text-muted-foreground">{certificateId || 'CERT-2026-08-12345'}</p>
                     </div>
                     <div className="text-right">
                       <p className="font-medium">Course Instructor</p>

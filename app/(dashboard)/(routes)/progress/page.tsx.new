@@ -13,32 +13,32 @@ export default function ProgressPage() {
   // Example learning events data - would come from API in real app
   // Define weekly events first
   const weeklyEvents = [
-    { day: 9, month: "Aug", title: "React Components", hours: 1.2, lessons: 3, notes: "Completed lessons on component lifecycle and hooks", category: "React Fundamentals" },
-    { day: 10, month: "Aug", title: "React State Management", hours: 0.8, lessons: 2, notes: "Learned about Context API and useReducer", category: "React Fundamentals" },
-    { day: 11, month: "Aug", title: "CSS Grid Layout", hours: 1.5, lessons: 4, notes: "Practiced creating responsive grid layouts", category: "CSS Animations" },
-    { day: 12, month: "Aug", title: "Node.js Routing", hours: 2.3, lessons: 3, notes: "Built Express routes for REST API", category: "Node.js Backend" },
-    { day: 13, month: "Aug", title: "User Authentication", hours: 1.8, lessons: 2, notes: "Implemented JWT token-based auth flow", category: "Node.js Backend" },
-    { day: 14, month: "Aug", title: "Design Systems", hours: 1.0, lessons: 2, notes: "Studied component design principles", category: "UI/UX Design" },
-    { day: 15, month: "Aug", title: "JavaScript Promises", hours: 2.5, lessons: 3, notes: "Deep dive into async/await patterns", category: "Advanced JavaScript" },
+    { day: 9, month: "Feb", title: "React Components", hours: 1.2, lessons: 3, notes: "Completed lessons on component lifecycle and hooks", category: "React Fundamentals" },
+    { day: 10, month: "Feb", title: "React State Management", hours: 0.8, lessons: 2, notes: "Learned about Context API and useReducer", category: "React Fundamentals" },
+    { day: 11, month: "Feb", title: "CSS Grid Layout", hours: 1.5, lessons: 4, notes: "Practiced creating responsive grid layouts", category: "CSS Animations" },
+    { day: 12, month: "Feb", title: "Node.js Routing", hours: 2.3, lessons: 3, notes: "Built Express routes for REST API", category: "Node.js Backend" },
+    { day: 13, month: "Feb", title: "User Authentication", hours: 1.8, lessons: 2, notes: "Implemented JWT token-based auth flow", category: "Node.js Backend" },
+    { day: 14, month: "Feb", title: "Design Systems", hours: 1.0, lessons: 2, notes: "Studied component design principles", category: "UI/UX Design" },
+    { day: 15, month: "Feb", title: "JavaScript Promises", hours: 2.5, lessons: 3, notes: "Deep dive into async/await patterns", category: "Advanced JavaScript" },
   ]
   
-  // Earlier August events
-  const earlyAugustEvents = [
-    { day: 1, month: "Aug", title: "React Introduction", hours: 1.0, lessons: 2, notes: "Started React fundamentals course", category: "React Fundamentals" },
-    { day: 3, month: "Aug", title: "JavaScript ES6", hours: 2.2, lessons: 5, notes: "Learned about arrow functions and destructuring", category: "Advanced JavaScript" },
-    { day: 5, month: "Aug", title: "Node.js Basics", hours: 1.5, lessons: 3, notes: "Set up first Node.js server", category: "Node.js Backend" },
-    { day: 7, month: "Aug", title: "UI Principles", hours: 0.5, lessons: 1, notes: "Color theory and typography", category: "UI/UX Design" },
+  // Earlier February events
+  const earlyFebruaryEvents = [
+    { day: 1, month: "Feb", title: "React Introduction", hours: 1.0, lessons: 2, notes: "Started React fundamentals course", category: "React Fundamentals" },
+    { day: 3, month: "Feb", title: "JavaScript ES6", hours: 2.2, lessons: 5, notes: "Learned about arrow functions and destructuring", category: "Advanced JavaScript" },
+    { day: 5, month: "Feb", title: "Node.js Basics", hours: 1.5, lessons: 3, notes: "Set up first Node.js server", category: "Node.js Backend" },
+    { day: 7, month: "Feb", title: "UI Principles", hours: 0.5, lessons: 1, notes: "Color theory and typography", category: "UI/UX Design" },
   ]
   
   // Future events
   const futureEvents = [
-    { day: 17, month: "Aug", title: "CSS Animations", hours: 0, lessons: 0, notes: "Planned: Animation principles", category: "CSS Animations", planned: true },
-    { day: 19, month: "Aug", title: "React Router", hours: 0, lessons: 0, notes: "Planned: Client-side routing", category: "React Fundamentals", planned: true },
-    { day: 21, month: "Aug", title: "API Testing", hours: 0, lessons: 0, notes: "Planned: Jest and Supertest", category: "Node.js Backend", planned: true },
+    { day: 17, month: "Feb", title: "CSS Animations", hours: 0, lessons: 0, notes: "Planned: Animation principles", category: "CSS Animations", planned: true },
+    { day: 19, month: "Feb", title: "React Router", hours: 0, lessons: 0, notes: "Planned: Client-side routing", category: "React Fundamentals", planned: true },
+    { day: 21, month: "Feb", title: "API Testing", hours: 0, lessons: 0, notes: "Planned: Jest and Supertest", category: "Node.js Backend", planned: true },
   ]
   
-  // July events
-  const julyEvents = [
+  // January events
+  const JanuaryEvents = [
     { day: 15, month: "Jul", title: "Programming Basics", hours: 1.5, lessons: 4, notes: "Variables, loops and functions", category: "Advanced JavaScript" },
     { day: 18, month: "Jul", title: "HTML Fundamentals", hours: 2.0, lessons: 5, notes: "Semantic HTML and accessibility", category: "UI/UX Design" },
     { day: 22, month: "Jul", title: "CSS Basics", hours: 1.8, lessons: 4, notes: "Selectors and layouts", category: "CSS Animations" },
@@ -49,8 +49,8 @@ export default function ProgressPage() {
   // Combine events for different views
   const learningEvents = {
     weekly: weeklyEvents,
-    monthly: [...earlyAugustEvents, ...weeklyEvents, ...futureEvents],
-    allTime: [...julyEvents, ...earlyAugustEvents, ...weeklyEvents, ...futureEvents]
+    monthly: [...earlyFebruaryEvents, ...weeklyEvents, ...futureEvents],
+    allTime: [...JanuaryEvents, ...earlyFebruaryEvents, ...weeklyEvents, ...futureEvents]
   }
   
   return (
@@ -189,7 +189,7 @@ export default function ProgressPage() {
           {/* Weekly View */}
           {timePeriod === "weekly" && (
             <div className="space-y-4">
-              <div className="text-sm text-muted-foreground mb-2">August 9-15, 2025</div>
+              <div className="text-sm text-muted-foreground mb-2">February 9-15, 2026</div>
               
               {/* Weekly timeline view */}
               <div className="space-y-3">
@@ -230,7 +230,7 @@ export default function ProgressPage() {
           {/* Monthly View */}
           {timePeriod === "monthly" && (
             <div className="mb-4">
-              <div className="text-sm text-muted-foreground mb-2">August 2025</div>
+              <div className="text-sm text-muted-foreground mb-2">February 2026</div>
               
               {/* Calendar Grid */}
               <div>
@@ -257,7 +257,7 @@ export default function ProgressPage() {
                     const isPastDay = day <= 15;
                     
                     // Find events for this day
-                    const dayEvents = learningEvents.monthly.filter(event => event.day === day && event.month === "Aug");
+                    const dayEvents = learningEvents.monthly.filter(event => event.day === day && event.month === "Feb");
                     const hasEvents = dayEvents.length > 0;
                     const isPlannedDay = dayEvents.some(event => event.planned);
                     
@@ -324,7 +324,7 @@ export default function ProgressPage() {
           {/* All Time View */}
           {timePeriod === "allTime" && (
             <div className="space-y-4">
-              <div className="text-sm text-muted-foreground mb-2">July - August 2025</div>
+              <div className="text-sm text-muted-foreground mb-2">January - February 2026</div>
               
               {/* Monthly activity chart */}
               <div className="h-72 bg-muted/10 border border-border rounded-lg p-4 relative">
@@ -347,7 +347,7 @@ export default function ProgressPage() {
                     ]
                   },
                   {
-                    month: "Aug", 
+                    month: "Feb", 
                     data: [
                       { week: "Week 1", hours: 6.8, color: "from-green-500 to-green-600", lessons: 11 },
                       { week: "Week 2", hours: 7.5, color: "from-teal-500 to-teal-600", lessons: 13 },
@@ -478,7 +478,7 @@ export default function ProgressPage() {
                 <div className="flex justify-between items-start mb-4">
                   <div>
                     <h3 className="text-xl font-bold">{selectedEvent.title}</h3>
-                    <p className="text-sm text-muted-foreground">{selectedEvent.day} {selectedEvent.month}, 2025</p>
+                    <p className="text-sm text-muted-foreground">{selectedEvent.day} {selectedEvent.month}, 2026</p>
                   </div>
                   <button 
                     onClick={() => setSelectedEvent(null)}
@@ -567,31 +567,6 @@ export default function ProgressPage() {
         </section>
         
         {/* Achievement Badges */}
-        <section className="mb-10">
-          <div className="flex justify-between items-center mb-6">
-            <h2 className="text-xl font-bold text-foreground">Your Achievements</h2>
-            <Button variant="link" className="text-primary">View All</Button>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-            {[
-              { name: "Early Bird", desc: "Complete 5 lessons before 9am", color: "bg-gradient-to-br from-yellow-400 to-orange-500", icon: <Sun className="h-6 w-6" /> },
-              { name: "Night Owl", desc: "Study for 2 hours after 10pm", color: "bg-gradient-to-br from-indigo-500 to-blue-600", icon: <Moon className="h-6 w-6" /> },
-              { name: "Consistent", desc: "Study for 7 days in a row", color: "bg-gradient-to-br from-green-400 to-teal-500", icon: <Calendar className="h-6 w-6" /> },
-              { name: "Perfectionist", desc: "Score 100% on 3 quizzes", color: "bg-gradient-to-br from-purple-400 to-pink-500", icon: <Award className="h-6 w-6" /> },
-              { name: "Speed Demon", desc: "Complete a course in record time", color: "bg-gradient-to-br from-red-400 to-pink-600", icon: <Zap className="h-6 w-6" /> },
-              { name: "Explorer", desc: "Try courses from 5 categories", color: "bg-gradient-to-br from-blue-400 to-emerald-500", icon: <Compass className="h-6 w-6" /> },
-            ].map((badge, index) => (
-              <div key={index} className={`${index > 3 ? 'opacity-30' : ''} rounded-lg p-4 flex flex-col items-center justify-center text-center ${badge.color} text-white aspect-square hover:shadow-lg transition-shadow`}>
-                <div className="mb-2">{badge.icon}</div>
-                <h3 className="font-medium text-sm mb-1">{badge.name}</h3>
-                <p className="text-xs opacity-90">{badge.desc}</p>
-                {index <= 3 && (
-                  <span className="mt-2 px-2 py-0.5 bg-white/20 rounded-full text-[10px]">Earned</span>
-                )}
-              </div>
-            ))}
-          </div>
-        </section>
 
         {/* Learning Goals */}
         <section>
@@ -604,7 +579,7 @@ export default function ProgressPage() {
               <div className="flex justify-between items-start mb-4">
                 <div>
                   <h3 className="font-medium text-foreground">Complete React Course</h3>
-                  <p className="text-sm text-muted-foreground mt-1">Finish all lessons by August 25</p>
+                  <p className="text-sm text-muted-foreground mt-1">Finish all lessons by February 25</p>
                 </div>
                 <div className="p-2 bg-primary/10 rounded-full">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">

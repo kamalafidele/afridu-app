@@ -49,7 +49,7 @@ const EventDetailPopup = dynamic(() => Promise.resolve(({
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold">{event.title}</h3>
-            <p className="text-sm text-muted-foreground">{event.day} {event.month}, 2025</p>
+            <p className="text-sm text-muted-foreground">{event.day} {event.month}, 2026</p>
           </div>
           <button 
             onClick={onClose}
@@ -127,14 +127,14 @@ export default function ProgressPage() {
   const [timePeriod, setTimePeriod] = useState<"weekly" | "monthly" | "allTime">("monthly")
   const [selectedEvent, setSelectedEvent] = useState<LearningEvent | null>(null)
   const [isMounted, setIsMounted] = useState(false)
-  const [currentMonth, setCurrentMonth] = useState("Aug")
+  const [currentMonth, setCurrentMonth] = useState("Feb")
   const [currentWeek, setCurrentWeek] = useState<"week1" | "week2" | "week3" | "week4">("week3")
   const [isAchievementsModalOpen, setIsAchievementsModalOpen] = useState(false)
   const [isGoalModalOpen, setIsGoalModalOpen] = useState(false)
   const [selectedGoal, setSelectedGoal] = useState<number | null>(null)
   const [selectedCourse, setSelectedCourse] = useState<string | null>(null)
-  // Fixed to 2025 as per requirement
-  const currentYear = 2025
+  // Fixed to 2026 as per requirement
+  const currentYear = 2026
   
   // Achievement data
   const achievements: Achievement[] = [
@@ -145,7 +145,7 @@ export default function ProgressPage() {
       color: "bg-gradient-to-br from-yellow-400 to-orange-500", 
       icon: <Sun className="h-6 w-6" />, 
       earned: true,
-      earnedDate: "Aug 10, 2025",
+      earnedDate: "Feb 10, 2026",
       progress: 5,
       totalRequired: 5
     },
@@ -156,7 +156,7 @@ export default function ProgressPage() {
       color: "bg-gradient-to-br from-indigo-500 to-blue-600", 
       icon: <Moon className="h-6 w-6" />, 
       earned: true,
-      earnedDate: "Jul 15, 2025",
+      earnedDate: "Jul 15, 2026",
       progress: 2,
       totalRequired: 2
     },
@@ -167,7 +167,7 @@ export default function ProgressPage() {
       color: "bg-gradient-to-br from-green-400 to-teal-500", 
       icon: <Calendar className="h-6 w-6" />, 
       earned: true,
-      earnedDate: "Aug 7, 2025",
+      earnedDate: "Feb 7, 2026",
       progress: 7,
       totalRequired: 7
     },
@@ -178,7 +178,7 @@ export default function ProgressPage() {
       color: "bg-gradient-to-br from-purple-400 to-pink-500", 
       icon: <Award className="h-6 w-6" />, 
       earned: true,
-      earnedDate: "Jul 30, 2025",
+      earnedDate: "Jul 30, 2026",
       progress: 3,
       totalRequired: 3
     },
@@ -209,7 +209,7 @@ export default function ProgressPage() {
       color: "bg-gradient-to-br from-orange-300 to-red-500",
       icon: <Award className="h-6 w-6" />,
       earned: true,
-      earnedDate: "Jul 22, 2025",
+      earnedDate: "Jul 22, 2026",
       progress: 4,
       totalRequired: 4
     },
@@ -220,7 +220,7 @@ export default function ProgressPage() {
       color: "bg-gradient-to-br from-violet-400 to-indigo-600",
       icon: <Award className="h-6 w-6" />,
       earned: true,
-      earnedDate: "Jun 15, 2025",
+      earnedDate: "Jun 15, 2026",
       progress: 10,
       totalRequired: 10
     },
@@ -251,7 +251,7 @@ export default function ProgressPage() {
       color: "bg-gradient-to-br from-amber-400 to-orange-600",
       icon: <Award className="h-6 w-6" />,
       earned: true,
-      earnedDate: "Aug 1, 2025",
+      earnedDate: "Feb 1, 2026",
       progress: 5,
       totalRequired: 5
     },
@@ -262,7 +262,7 @@ export default function ProgressPage() {
       color: "bg-gradient-to-br from-lime-400 to-green-600",
       icon: <Award className="h-6 w-6" />,
       earned: true,
-      earnedDate: "Jun 28, 2025",
+      earnedDate: "Jun 28, 2026",
       progress: 1,
       totalRequired: 1
     }
@@ -307,7 +307,7 @@ export default function ProgressPage() {
         { day: 28, month: "Jun", title: "Web Standards", hours: 1.1, lessons: 2, notes: "Web standards and accessibility", category: "UI/UX Design" }
       ]
     },
-    // July weekly events
+    // January weekly events
     "Jul": {
       "week1": [
         { day: 1, month: "Jul", title: "HTML Introduction", hours: 1.2, lessons: 3, notes: "Basic HTML tags and structure", category: "UI/UX Design" },
@@ -338,38 +338,38 @@ export default function ProgressPage() {
         { day: 28, month: "Jul", title: "HTTP & APIs", hours: 1.2, lessons: 3, notes: "RESTful services and fetch API", category: "Node.js Backend" }
       ]
     },
-    // August weekly events
-    "Aug": {
+    // February weekly events
+    "Feb": {
       "week1": [
-        { day: 1, month: "Aug", title: "React Introduction", hours: 1.0, lessons: 2, notes: "Started React fundamentals course", category: "React Fundamentals" },
-        { day: 2, month: "Aug", title: "React JSX", hours: 0.8, lessons: 2, notes: "JSX syntax and expressions", category: "React Fundamentals" },
-        { day: 3, month: "Aug", title: "JavaScript ES6", hours: 2.2, lessons: 5, notes: "Learned about arrow functions and destructuring", category: "Advanced JavaScript" },
-        { day: 5, month: "Aug", title: "Node.js Basics", hours: 1.5, lessons: 3, notes: "Set up first Node.js server", category: "Node.js Backend" },
-        { day: 7, month: "Aug", title: "UI Principles", hours: 0.5, lessons: 1, notes: "Color theory and typography", category: "UI/UX Design" }
+        { day: 1, month: "Feb", title: "React Introduction", hours: 1.0, lessons: 2, notes: "Started React fundamentals course", category: "React Fundamentals" },
+        { day: 2, month: "Feb", title: "React JSX", hours: 0.8, lessons: 2, notes: "JSX syntax and expressions", category: "React Fundamentals" },
+        { day: 3, month: "Feb", title: "JavaScript ES6", hours: 2.2, lessons: 5, notes: "Learned about arrow functions and destructuring", category: "Advanced JavaScript" },
+        { day: 5, month: "Feb", title: "Node.js Basics", hours: 1.5, lessons: 3, notes: "Set up first Node.js server", category: "Node.js Backend" },
+        { day: 7, month: "Feb", title: "UI Principles", hours: 0.5, lessons: 1, notes: "Color theory and typography", category: "UI/UX Design" }
       ],
       "week2": [
-        { day: 8, month: "Aug", title: "React Props", hours: 1.0, lessons: 2, notes: "Component props and data flow", category: "React Fundamentals" },
-        { day: 9, month: "Aug", title: "React Components", hours: 1.2, lessons: 3, notes: "Completed lessons on component lifecycle and hooks", category: "React Fundamentals" },
-        { day: 10, month: "Aug", title: "React State Management", hours: 0.8, lessons: 2, notes: "Learned about Context API and useReducer", category: "React Fundamentals" },
-        { day: 11, month: "Aug", title: "CSS Grid Layout", hours: 1.5, lessons: 4, notes: "Practiced creating responsive grid layouts", category: "CSS Animations" },
-        { day: 12, month: "Aug", title: "Node.js Routing", hours: 2.3, lessons: 3, notes: "Built Express routes for REST API", category: "Node.js Backend" }
+        { day: 8, month: "Feb", title: "React Props", hours: 1.0, lessons: 2, notes: "Component props and data flow", category: "React Fundamentals" },
+        { day: 9, month: "Feb", title: "React Components", hours: 1.2, lessons: 3, notes: "Completed lessons on component lifecycle and hooks", category: "React Fundamentals" },
+        { day: 10, month: "Feb", title: "React State Management", hours: 0.8, lessons: 2, notes: "Learned about Context API and useReducer", category: "React Fundamentals" },
+        { day: 11, month: "Feb", title: "CSS Grid Layout", hours: 1.5, lessons: 4, notes: "Practiced creating responsive grid layouts", category: "CSS Animations" },
+        { day: 12, month: "Feb", title: "Node.js Routing", hours: 2.3, lessons: 3, notes: "Built Express routes for REST API", category: "Node.js Backend" }
       ],
       "week3": [
-        { day: 13, month: "Aug", title: "User Authentication", hours: 1.8, lessons: 2, notes: "Implemented JWT token-based auth flow", category: "Node.js Backend" },
-        { day: 14, month: "Aug", title: "Design Systems", hours: 1.0, lessons: 2, notes: "Studied component design principles", category: "UI/UX Design" },
-        { day: 15, month: "Aug", title: "JavaScript Promises", hours: 2.5, lessons: 3, notes: "Deep dive into async/await patterns", category: "Advanced JavaScript" },
-        { day: 16, month: "Aug", title: "React Hooks", hours: 1.3, lessons: 2, notes: "useState and useEffect deep dive", category: "React Fundamentals" },
-        { day: 17, month: "Aug", title: "CSS Animations", hours: 0, lessons: 0, notes: "Planned: Animation principles", category: "CSS Animations", planned: true }
+        { day: 13, month: "Feb", title: "User Authentication", hours: 1.8, lessons: 2, notes: "Implemented JWT token-based auth flow", category: "Node.js Backend" },
+        { day: 14, month: "Feb", title: "Design Systems", hours: 1.0, lessons: 2, notes: "Studied component design principles", category: "UI/UX Design" },
+        { day: 15, month: "Feb", title: "JavaScript Promises", hours: 2.5, lessons: 3, notes: "Deep dive into async/await patterns", category: "Advanced JavaScript" },
+        { day: 16, month: "Feb", title: "React Hooks", hours: 1.3, lessons: 2, notes: "useState and useEffect deep dive", category: "React Fundamentals" },
+        { day: 17, month: "Feb", title: "CSS Animations", hours: 0, lessons: 0, notes: "Planned: Animation principles", category: "CSS Animations", planned: true }
       ],
       "week4": [
-        { day: 19, month: "Aug", title: "React Router", hours: 0, lessons: 0, notes: "Planned: Client-side routing", category: "React Fundamentals", planned: true },
-        { day: 21, month: "Aug", title: "API Testing", hours: 0, lessons: 0, notes: "Planned: Jest and Supertest", category: "Node.js Backend", planned: true },
-        { day: 22, month: "Aug", title: "Redux Basics", hours: 0, lessons: 0, notes: "Planned: State management with Redux", category: "React Fundamentals", planned: true },
-        { day: 24, month: "Aug", title: "GraphQL Intro", hours: 0, lessons: 0, notes: "Planned: Introduction to GraphQL", category: "Node.js Backend", planned: true },
-        { day: 26, month: "Aug", title: "Deployment", hours: 0, lessons: 0, notes: "Planned: Deploying web applications", category: "Node.js Backend", planned: true }
+        { day: 19, month: "Feb", title: "React Router", hours: 0, lessons: 0, notes: "Planned: Client-side routing", category: "React Fundamentals", planned: true },
+        { day: 21, month: "Feb", title: "API Testing", hours: 0, lessons: 0, notes: "Planned: Jest and Supertest", category: "Node.js Backend", planned: true },
+        { day: 22, month: "Feb", title: "Redux Basics", hours: 0, lessons: 0, notes: "Planned: State management with Redux", category: "React Fundamentals", planned: true },
+        { day: 24, month: "Feb", title: "GraphQL Intro", hours: 0, lessons: 0, notes: "Planned: Introduction to GraphQL", category: "Node.js Backend", planned: true },
+        { day: 26, month: "Feb", title: "Deployment", hours: 0, lessons: 0, notes: "Planned: Deploying web applications", category: "Node.js Backend", planned: true }
       ]
     },
-    // September weekly events (all planned)
+    // january weekly events (all planned)
     "Sep": {
       "week1": [
         { day: 2, month: "Sep", title: "React Hooks Deep Dive", hours: 0, lessons: 0, notes: "Planned: Advanced hooks patterns", category: "React Fundamentals", planned: true },
@@ -403,25 +403,25 @@ export default function ProgressPage() {
   };
   
   // Current weekly events based on selected month and week
-  const weeklyEvents = weeklyEventsByMonth[currentMonth]?.[currentWeek] || weeklyEventsByMonth["Aug"]["week3"];
+  const weeklyEvents = weeklyEventsByMonth[currentMonth]?.[currentWeek] || weeklyEventsByMonth["Feb"]["week3"];
   
-  // Earlier August events
-  const earlyAugustEvents = [
-    { day: 1, month: "Aug", title: "React Introduction", hours: 1.0, lessons: 2, notes: "Started React fundamentals course", category: "React Fundamentals" },
-    { day: 3, month: "Aug", title: "JavaScript ES6", hours: 2.2, lessons: 5, notes: "Learned about arrow functions and destructuring", category: "Advanced JavaScript" },
-    { day: 5, month: "Aug", title: "Node.js Basics", hours: 1.5, lessons: 3, notes: "Set up first Node.js server", category: "Node.js Backend" },
-    { day: 7, month: "Aug", title: "UI Principles", hours: 0.5, lessons: 1, notes: "Color theory and typography", category: "UI/UX Design" },
+  // Earlier February events
+  const earlyFebruaryEvents = [
+    { day: 1, month: "Feb", title: "React Introduction", hours: 1.0, lessons: 2, notes: "Started React fundamentals course", category: "React Fundamentals" },
+    { day: 3, month: "Feb", title: "JavaScript ES6", hours: 2.2, lessons: 5, notes: "Learned about arrow functions and destructuring", category: "Advanced JavaScript" },
+    { day: 5, month: "Feb", title: "Node.js Basics", hours: 1.5, lessons: 3, notes: "Set up first Node.js server", category: "Node.js Backend" },
+    { day: 7, month: "Feb", title: "UI Principles", hours: 0.5, lessons: 1, notes: "Color theory and typography", category: "UI/UX Design" },
   ]
   
   // Future events
   const futureEvents = [
-    { day: 17, month: "Aug", title: "CSS Animations", hours: 0, lessons: 0, notes: "Planned: Animation principles", category: "CSS Animations", planned: true },
-    { day: 19, month: "Aug", title: "React Router", hours: 0, lessons: 0, notes: "Planned: Client-side routing", category: "React Fundamentals", planned: true },
-    { day: 21, month: "Aug", title: "API Testing", hours: 0, lessons: 0, notes: "Planned: Jest and Supertest", category: "Node.js Backend", planned: true },
+    { day: 17, month: "Feb", title: "CSS Animations", hours: 0, lessons: 0, notes: "Planned: Animation principles", category: "CSS Animations", planned: true },
+    { day: 19, month: "Feb", title: "React Router", hours: 0, lessons: 0, notes: "Planned: Client-side routing", category: "React Fundamentals", planned: true },
+    { day: 21, month: "Feb", title: "API Testing", hours: 0, lessons: 0, notes: "Planned: Jest and Supertest", category: "Node.js Backend", planned: true },
   ]
   
-  // July events
-  const julyEvents = [
+  // January events
+  const JanuaryEvents = [
     { day: 5, month: "Jul", title: "Programming Basics", hours: 1.5, lessons: 4, notes: "Variables, loops and functions", category: "Advanced JavaScript" },
     { day: 8, month: "Jul", title: "HTML Structure", hours: 1.2, lessons: 3, notes: "Document structure and elements", category: "UI/UX Design" },
     { day: 10, month: "Jul", title: "CSS Intro", hours: 1.0, lessons: 2, notes: "Basic styling concepts", category: "CSS Animations" },
@@ -441,8 +441,8 @@ export default function ProgressPage() {
     { day: 25, month: "Jun", title: "Design Principles", hours: 1.5, lessons: 3, notes: "Basic visual design", category: "UI/UX Design" },
   ]
   
-  // September planned events
-  const septemberEvents = [
+  // january planned events
+  const januaryEvents = [
     { day: 2, month: "Sep", title: "React Hooks Deep Dive", hours: 0, lessons: 0, notes: "Planned: Advanced hooks patterns", category: "React Fundamentals", planned: true },
     { day: 5, month: "Sep", title: "Database Design", hours: 0, lessons: 0, notes: "Planned: SQL & NoSQL concepts", category: "Node.js Backend", planned: true },
     { day: 10, month: "Sep", title: "Responsive Design", hours: 0, lessons: 0, notes: "Planned: Mobile-first approaches", category: "CSS Animations", planned: true },
@@ -453,16 +453,16 @@ export default function ProgressPage() {
   // Map of events by month for easily accessing events
   const eventsByMonth = {
     "Jun": juneEvents,
-    "Jul": julyEvents,
-    "Aug": [...earlyAugustEvents, ...weeklyEvents, ...futureEvents],
-    "Sep": septemberEvents
+    "Jul": JanuaryEvents,
+    "Feb": [...earlyFebruaryEvents, ...weeklyEvents, ...futureEvents],
+    "Sep": januaryEvents
   }
   
   // Combine events for different views
   const learningEvents = {
     weekly: weeklyEvents,
-    monthly: eventsByMonth[currentMonth] || [...earlyAugustEvents, ...weeklyEvents, ...futureEvents],
-    allTime: [...juneEvents, ...julyEvents, ...earlyAugustEvents, ...weeklyEvents, ...futureEvents, ...septemberEvents]
+    monthly: eventsByMonth[currentMonth] || [...earlyFebruaryEvents, ...weeklyEvents, ...futureEvents],
+    allTime: [...juneEvents, ...JanuaryEvents, ...earlyFebruaryEvents, ...weeklyEvents, ...futureEvents, ...januaryEvents]
   }
   
   return (
@@ -518,7 +518,7 @@ export default function ProgressPage() {
                     {timePeriod === "weekly" ? "11.1" : 
                      timePeriod === "monthly" && currentMonth === "Jun" ? "21.4" :
                      timePeriod === "monthly" && currentMonth === "Jul" ? "25.4" :
-                     timePeriod === "monthly" && currentMonth === "Aug" ? "11.1" :
+                     timePeriod === "monthly" && currentMonth === "Feb" ? "11.1" :
                      timePeriod === "monthly" && currentMonth === "Sep" ? "0" :
                      "65.5"} hrs
                   </p>
@@ -531,7 +531,7 @@ export default function ProgressPage() {
                   {timePeriod === "weekly" ? "8" : 
                    timePeriod === "monthly" && currentMonth === "Jun" ? "New" :
                    timePeriod === "monthly" && currentMonth === "Jul" ? "38" :
-                   timePeriod === "monthly" && currentMonth === "Aug" ? "12" :
+                   timePeriod === "monthly" && currentMonth === "Feb" ? "12" :
                    timePeriod === "monthly" && currentMonth === "Sep" ? "0" :
                    "15"}% increase from {timePeriod === "weekly" ? "last week" : "last month"}
                 </span>
@@ -548,7 +548,7 @@ export default function ProgressPage() {
                     {timePeriod === "weekly" ? "2" : 
                      timePeriod === "monthly" && currentMonth === "Jun" ? "3" :
                      timePeriod === "monthly" && currentMonth === "Jul" ? "4" :
-                     timePeriod === "monthly" && currentMonth === "Aug" ? "2" :
+                     timePeriod === "monthly" && currentMonth === "Feb" ? "2" :
                      timePeriod === "monthly" && currentMonth === "Sep" ? "0" :
                      "9"}
                   </p>
@@ -561,7 +561,7 @@ export default function ProgressPage() {
                   {timePeriod === "weekly" ? "1" : 
                    timePeriod === "monthly" && currentMonth === "Jun" ? "New" :
                    timePeriod === "monthly" && currentMonth === "Jul" ? "2" :
-                   timePeriod === "monthly" && currentMonth === "Aug" ? "1" :
+                   timePeriod === "monthly" && currentMonth === "Feb" ? "1" :
                    timePeriod === "monthly" && currentMonth === "Sep" ? "0" :
                    "4"} more than {timePeriod === "weekly" ? "last week" : "last month"}
                 </span>
@@ -578,7 +578,7 @@ export default function ProgressPage() {
                     {timePeriod === "weekly" ? "17" : 
                      timePeriod === "monthly" && currentMonth === "Jun" ? "42" :
                      timePeriod === "monthly" && currentMonth === "Jul" ? "58" :
-                     timePeriod === "monthly" && currentMonth === "Aug" ? "17" :
+                     timePeriod === "monthly" && currentMonth === "Feb" ? "17" :
                      timePeriod === "monthly" && currentMonth === "Sep" ? "0" :
                      "132"}
                   </p>
@@ -591,7 +591,7 @@ export default function ProgressPage() {
                   {timePeriod === "weekly" ? "4" : 
                    timePeriod === "monthly" && currentMonth === "Jun" ? "New" :
                    timePeriod === "monthly" && currentMonth === "Jul" ? "6" :
-                   timePeriod === "monthly" && currentMonth === "Aug" ? "3" :
+                   timePeriod === "monthly" && currentMonth === "Feb" ? "3" :
                    timePeriod === "monthly" && currentMonth === "Sep" ? "0" :
                    "14"} more than {timePeriod === "weekly" ? "last week" : "last month"}
                 </span>
@@ -608,7 +608,7 @@ export default function ProgressPage() {
                     {timePeriod === "weekly" ? "4.9" : 
                      timePeriod === "monthly" && currentMonth === "Jun" ? "4.5" :
                      timePeriod === "monthly" && currentMonth === "Jul" ? "4.7" :
-                     timePeriod === "monthly" && currentMonth === "Aug" ? "4.9" :
+                     timePeriod === "monthly" && currentMonth === "Feb" ? "4.9" :
                      timePeriod === "monthly" && currentMonth === "Sep" ? "0" :
                      "4.7"}
                   </p>
@@ -621,7 +621,7 @@ export default function ProgressPage() {
                   {timePeriod === "weekly" ? "0.3" : 
                    timePeriod === "monthly" && currentMonth === "Jun" ? "New" :
                    timePeriod === "monthly" && currentMonth === "Jul" ? "0.1" :
-                   timePeriod === "monthly" && currentMonth === "Aug" ? "0.2" :
+                   timePeriod === "monthly" && currentMonth === "Feb" ? "0.2" :
                    timePeriod === "monthly" && currentMonth === "Sep" ? "0" :
                    "0.1"} higher than {timePeriod === "weekly" ? "last week" : "last month"}
                 </span>
@@ -643,7 +643,7 @@ export default function ProgressPage() {
                   onClick={() => {
                     // Logic for previous week or month
                     const weeks = ["week1", "week2", "week3", "week4"];
-                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"];
                     
                     const currentWeekIndex = weeks.indexOf(currentWeek);
                     const currentMonthIndex = months.indexOf(currentMonth);
@@ -679,7 +679,7 @@ export default function ProgressPage() {
                   onClick={() => {
                     // Logic for next week or month
                     const weeks = ["week1", "week2", "week3", "week4"];
-                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"];
                     
                     const currentWeekIndex = weeks.indexOf(currentWeek);
                     const currentMonthIndex = months.indexOf(currentMonth);
@@ -707,7 +707,7 @@ export default function ProgressPage() {
                 {currentWeek === "week1" ? "1-7" : 
                  currentWeek === "week2" ? "8-14" : 
                  currentWeek === "week3" ? "15-21" : 
-                 "22-30"} {currentMonth} 2025
+                 "22-30"} {currentMonth} 2026
               </div>
               
               {/* Weekly timeline view */}
@@ -754,9 +754,9 @@ export default function ProgressPage() {
                     There are no learning activities recorded for {currentWeek === "week1" ? "Week 1" : 
                     currentWeek === "week2" ? "Week 2" : 
                     currentWeek === "week3" ? "Week 3" : 
-                    "Week 4"} of {currentMonth} 2025.
+                    "Week 4"} of {currentMonth} 2026.
                   </p>
-                  <Button className="mt-4" onClick={() => {setCurrentMonth("Aug"); setCurrentWeek("week3");}}>
+                  <Button className="mt-4" onClick={() => {setCurrentMonth("Feb"); setCurrentWeek("week3");}}>
                     View Current Week
                   </Button>
                 </div>
@@ -767,12 +767,12 @@ export default function ProgressPage() {
           {/* Monthly View */}
           {timePeriod === "monthly" && (
             <div className="mb-4">
-              {/* Month navigation - arrows only for 2025 */}
+              {/* Month navigation - arrows only for 2026 */}
               <div className="flex justify-between items-center mb-4">
                 <button 
                   onClick={() => {
-                    // Logic to go to previous month (within 2025 only)
-                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    // Logic to go to previous month (within 2026 only)
+                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"];
                     const currentIndex = months.indexOf(currentMonth);
                     if (currentIndex > 0) {
                       setCurrentMonth(months[currentIndex - 1]);
@@ -787,13 +787,13 @@ export default function ProgressPage() {
                 </button>
                 
                 <div className="flex items-center justify-center space-x-2">
-                  <div className="text-lg font-medium">{currentMonth} 2025</div>
+                  <div className="text-lg font-medium">{currentMonth} 2026</div>
                 </div>
                 
                 <button 
                   onClick={() => {
-                    // Logic to go to next month (within 2025 only)
-                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+                    // Logic to go to next month (within 2026 only)
+                    const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"];
                     const currentIndex = months.indexOf(currentMonth);
                     if (currentIndex < months.length - 1) {
                       setCurrentMonth(months[currentIndex + 1]);
@@ -825,13 +825,13 @@ export default function ProgressPage() {
                 {(() => {
                   // Helper function to get the first day of month (0 = Sunday, 1 = Monday, etc.)
                   const getFirstDayOfMonth = (month, year) => {
-                    const monthIndex = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].indexOf(month);
+                    const monthIndex = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"].indexOf(month);
                     return new Date(year, monthIndex, 1).getDay();
                   };
                   
                   // Helper function to get number of days in month
                   const getDaysInMonth = (month, year) => {
-                    const monthIndex = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].indexOf(month);
+                    const monthIndex = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"].indexOf(month);
                     return new Date(year, monthIndex + 1, 0).getDate();
                   };
                   
@@ -839,7 +839,7 @@ export default function ProgressPage() {
                   const daysInMonth = getDaysInMonth(currentMonth, currentYear);
                   const today = new Date();
                   const currentRealDay = today.getDate();
-                  const currentRealMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][today.getMonth()];
+                  const currentRealMonth = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"][today.getMonth()];
                   const currentRealYear = today.getFullYear();
                   
                   // Render empty cells for start of month
@@ -850,10 +850,10 @@ export default function ProgressPage() {
                   // Render days of month
                   const dayCells = Array.from({ length: daysInMonth }).map((_, index) => {
                     const day = index + 1;
-                    const isCurrentDay = currentRealDay === day && currentRealMonth === currentMonth && currentRealYear === 2025;
-                    const isPastDay = (["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].indexOf(currentMonth) < 
-                                      ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"].indexOf("Aug")) ||
-                                     (currentMonth === "Aug" && day <= 15);
+                    const isCurrentDay = currentRealDay === day && currentRealMonth === currentMonth && currentRealYear === 2026;
+                    const isPastDay = (["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"].indexOf(currentMonth) < 
+                                      ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Feb", "Sep", "Oct", "Nov", "Dec"].indexOf("Feb")) ||
+                                     (currentMonth === "Feb" && day <= 15);
                     
                     // Find events for this day
                     const dayEvents = learningEvents.monthly.filter(event => event.day === day && event.month === currentMonth);
@@ -905,10 +905,10 @@ export default function ProgressPage() {
                   </div>
                   <h3 className="text-lg font-medium text-foreground">No learning activity found</h3>
                   <p className="text-sm text-muted-foreground mt-2 text-center max-w-md">
-                    There are no learning activities recorded for {currentMonth} 2025. 
+                    There are no learning activities recorded for {currentMonth} 2026. 
                     Use the arrows above to navigate to months with activity or plan new lessons.
                   </p>
-                  <Button className="mt-4" onClick={() => setCurrentMonth("Aug")}>
+                  <Button className="mt-4" onClick={() => setCurrentMonth("Feb")}>
                     View Current Month
                   </Button>
                 </div>
@@ -947,7 +947,7 @@ export default function ProgressPage() {
           {/* All Time View */}
           {timePeriod === "allTime" && (
             <div className="space-y-4">
-              <div className="text-sm text-muted-foreground mb-2">June - September 2025</div>
+              <div className="text-sm text-muted-foreground mb-2">January - March 2026</div>
               
               {/* Monthly activity chart */}
               <div className="h-72 bg-muted/10 border border-border rounded-lg p-4 relative">
@@ -979,7 +979,7 @@ export default function ProgressPage() {
                     ]
                   },
                   {
-                    month: "Aug", 
+                    month: "Feb", 
                     data: [
                       { week: "Week 1", hours: 6.0, color: "from-green-400 to-green-500", lessons: 13 },
                       { week: "Week 2", hours: 6.8, color: "from-green-500 to-green-600", lessons: 14 },
@@ -1307,7 +1307,7 @@ export default function ProgressPage() {
               {
                 id: 1,
                 title: "Complete React Course",
-                description: "Finish all lessons by August 25",
+                description: "Finish all lessons by February 25",
                 icon: (
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />

@@ -127,7 +127,7 @@ export const GoalModal = ({
                 onChange={(e) => setGoalDeadline(e.target.value)}
                 placeholder={
                   goalType === 'course' 
-                    ? "e.g., August 25, 2025" 
+                    ? "e.g., February 25, 2026" 
                     : goalType === 'habit' 
                     ? "e.g., 30 days" 
                     : "e.g., 90 days"

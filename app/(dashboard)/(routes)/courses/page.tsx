@@ -41,7 +41,7 @@ const inProgressCourses = [
     featured: "bestseller",
     skillLevel: "intermediate",
     lastLesson: "Advanced Component Patterns",
-    lastActivity: "August 10, 2025"
+    lastActivity: "February 10, 2026"
   },
   {
     id: "ui-ux-design",
@@ -58,7 +58,7 @@ const inProgressCourses = [
     featured: null,
     skillLevel: "beginner",
     lastLesson: "Introduction to User Research",
-    lastActivity: "August 8, 2025"
+    lastActivity: "February 8, 2026"
   },
   {
     id: "node-backend",
@@ -75,7 +75,7 @@ const inProgressCourses = [
     featured: "new",
     skillLevel: "intermediate",
     lastLesson: "Building RESTful APIs",
-    lastActivity: "August 12, 2025"
+    lastActivity: "February 12, 2026"
   }
 ];
 
@@ -86,12 +86,12 @@ const completedCourses = [
     description: "Learn modern HTML5 and CSS3 techniques for building responsive and beautiful websites.",
     categoryLabel: "Web Development",
     totalHours: 10,
-    completionDate: "July 15, 2025",
+    completionDate: "January 15, 2026",
     rating: 4.9,
     gradient: "from-green-500 to-teal-600",
     featured: null,
     skillLevel: "beginner",
-    certificateId: "CERT-2025-07-12345"
+    certificateId: "CERT-2026-07-12345"
   },
   {
     id: "javascript-basics",
@@ -99,12 +99,12 @@ const completedCourses = [
     description: "A comprehensive introduction to JavaScript fundamentals, including variables, functions, and DOM manipulation.",
     categoryLabel: "Programming",
     totalHours: 8,
-    completionDate: "June 22, 2025",
+    completionDate: "June 22, 2026",
     rating: 4.7,
     gradient: "from-yellow-500 to-orange-500",
     featured: "top-rated",
     skillLevel: "beginner",
-    certificateId: "CERT-2025-06-67890"
+    certificateId: "CERT-2026-06-67890"
   }
 ];
 

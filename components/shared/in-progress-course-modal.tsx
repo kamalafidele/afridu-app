@@ -107,13 +107,13 @@ export function InProgressCourseModal({
       id: 1,
       lessonTitle: "Building Your First Project",
       content: "Remember to initialize the project with npm init before installing dependencies. Important commands: npm install react react-dom, npx create-react-app my-app",
-      timestamp: "August 10, 2025"
+      timestamp: "February 10, 2026"
     },
     {
       id: 2,
       lessonTitle: "Understanding the Basics",
       content: "React components can be functional (using hooks) or class-based. Hooks were introduced in React 16.8. The most commonly used hooks are useState and useEffect.",
-      timestamp: "August 5, 2025"
+      timestamp: "February 5, 2026"
     }
   ];
   

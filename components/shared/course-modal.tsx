@@ -93,19 +93,19 @@ export function CourseModal({
   const reviews = [
     {
       name: "Sarah Johnson",
-      date: "June 15, 2025",
+      date: "June 15, 2026",
       rating: 5,
       comment: "This course exceeded my expectations. The instructor was knowledgeable and the content was well-structured."
     },
     {
       name: "Michael Chen",
-      date: "May 28, 2025",
+      date: "May 28, 2026",
       rating: 4,
       comment: "Very practical course with lots of hands-on examples. Would recommend to others looking to build their skills."
     },
     {
       name: "Emma Wilson",
-      date: "July 2, 2025",
+      date: "January 2, 2026",
       rating: 5,
       comment: "Excellent course! I've learned so much and applied it directly to my work. The instructor was responsive to questions too."
     }
