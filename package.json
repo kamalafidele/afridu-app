@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev -p $PORT -H 0.0.0.0",
     "build": "next build",
-    "start": "next start -H 0.0.0.0",
+    "start": "next start -p $PORT -H 0.0.0.0",
     "lint": "next lint",
     "lint:security": "eslint . --ext .js,.jsx,.ts,.tsx --config .eslintrc.security.json",
     "audit": "npm audit --audit-level=moderate",
@@ -39,5 +39,8 @@
     "postcss": "^8.4.38",
     "tailwindcss": "^3.4.4",
     "typescript": "^5"
-  }
+  },
+"engines": {
+  "node": "22.x"
+}
 }
